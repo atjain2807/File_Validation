@@ -1,0 +1,4 @@
+1223;Harsh;20000;Marketing;manager;Marketing
+3213;Vivek;15000;Financial;advisor;Finance
+6542;Krishna;21000;HR manager;HR
+9213;Sarika;34000;Sales manager;Sales
