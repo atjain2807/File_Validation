@@ -1,5 +1,6 @@
 package com.example.file_validation.services;
 
+import java.io.File;
 import java.util.List;
 
 import com.example.file_validation.modal.FileModal;
@@ -17,6 +18,9 @@ public class FileServiceImplementation implements FileService {
     @Autowired
     FileRepository fileRepository;
 
+    @Autowired
+    FileInjestion fileInjestion;
+
     @Override
     public List<FileModal> getAllFiles() {
         // fetch all the files form database
@@ -27,4 +31,16 @@ public class FileServiceImplementation implements FileService {
         for (FileModal fileModal : fileList)
             fileRepository.save(fileModal);
     }
+
+    public String getFileExtension(FileModal fileModal){
+        String[] strings = fileModal.getFileName().toString().split(".");
+        return strings[1];
+    }
+
+    public String getFileType(FileModal fileModal){
+        return fileModal.getFileType();
+    }
+
+
+
 }

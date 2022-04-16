@@ -7,17 +7,17 @@ import javax.persistence.*;
 // Entity annotation defines that a
 // class can be mapped to a table
 @Entity
-@Table(name = "custmodal")
+@Table(name = "officeModal")
 public class OfficeModal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "custId")
-    long custId;
+    @Column(name = "officeID")
+    long officeID;
 
     @NotNull
-    @Column(name = "custName")
-    String custName;
+    @Column(name = "officeName")
+    String officeName;
 
     @Column(name = "address")
     String address;
@@ -30,15 +30,15 @@ public class OfficeModal {
     }
     public OfficeModal(String fileName, String content, String attribute) {
         super();
-        this.custName = fileName;
+        this.officeName = fileName;
         this.address = content;
         this.primaryDoctor = attribute;
     }
-    public String getCustName() {
-        return custName;
+    public String getOfficeName() {
+        return officeName;
     }
-    public void setCustName(String fileName) {
-        this.custName = fileName;
+    public void setOfficeName(String fileName) {
+        this.officeName = fileName;
     }
     public String getAddress() {
         return address;
