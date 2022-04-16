@@ -1,4 +1,4 @@
-package com.example.file_validation.demo;
+package com.example.file_validation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
